@@ -1,4 +1,4 @@
-class UserController < ApplciationController
+class UsersController < ApplicationController
 
   def new
     @user = User.new
@@ -9,7 +9,7 @@ class UserController < ApplciationController
       name: params[:user][:name],
       email: params[:user][:email],
       password: params[:user][:password],
-      password_confirmation: params[:user][:password_confirmation]
+      #password_confirmation: params[:user][:password_confirmation]
     })
     if @user.save
       redirect_to("/")
@@ -17,5 +17,9 @@ class UserController < ApplciationController
       # render the new.html.erb file with @user
       render :new
     end
+  end
+
+  def show
+    @user = current_user
   end
 end

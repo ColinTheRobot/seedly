@@ -1,9 +1,9 @@
 <h1>Seedly</h1>
 
   <% if logged_in? %>
-    <p>Welcome back <%= @current_user.name %>!</p>
-  <!--   <a href="/logout">logout</a>  needs a destroy route -->
+    <p>Welcome back <%= current_user.name %></p>
+    <a href="/logout">logout</a>
   <% else %>
-    <a href="session/new">Sign up</a>
-    <a href="users/new">Log in</a>
+    <a href="session/new">log in</a>
+    <a href="users/new">sign up</a>
   <% end %>

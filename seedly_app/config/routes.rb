@@ -6,6 +6,9 @@ SeedlyApp::Application.routes.draw do
   root 'welcome#index'
   get '/session/new' => "session#new"
   post '/session' => "session#create"
+  get '/logout' => "session#destroy"
+
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
