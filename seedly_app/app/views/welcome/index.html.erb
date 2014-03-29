@@ -2,7 +2,7 @@
 
   <% if logged_in? %>
     <p>Welcome back <%= @current_user.name %>!</p>
-    <a href="/logout">logout</a>  needs a destroy route
+  <!--   <a href="/logout">logout</a>  needs a destroy route -->
   <% else %>
     <a href="session/new">Sign up</a>
     <a href="users/new">Log in</a>
