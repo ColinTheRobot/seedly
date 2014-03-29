@@ -3,9 +3,11 @@
 
 ## API -- uses Farmsense
 
-  http://www.farmsense.net/
+- http://www.farmsense.net/
 
+## pivotal tracker
 
+- https://www.pivotaltracker.com/s/projects/1047464#
 ---
 
 # notes for myself DELETE/EDIT when submitting
