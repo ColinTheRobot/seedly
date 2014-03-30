@@ -1,5 +1,6 @@
 <h1>Seedly</h1>
 
+<p>
   <% if logged_in? %>
     <p>Welcome back <%= current_user.name %></p>
     <a href="/logout">logout</a>
@@ -7,3 +8,5 @@
     <a href="session/new">log in</a>
     <a href="users/new">sign up</a>
   <% end %>
+</p>
+

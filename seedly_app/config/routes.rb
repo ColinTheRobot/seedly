@@ -9,6 +9,8 @@ SeedlyApp::Application.routes.draw do
   get '/logout' => "session#destroy"
 
   resources :users
+  resources :frost_dates
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
