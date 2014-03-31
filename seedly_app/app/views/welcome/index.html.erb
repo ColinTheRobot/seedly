@@ -2,12 +2,27 @@
 
 <p>
   <% if logged_in? %>
+  <ul>
     <p>Welcome back <%= current_user.name %></p>
-    <a href="/logout">logout</a>
-  <% else %>
+    <li>
+      <a href="/logout">logout</a>
+    </li>
+    <li>
+      <a href="<%= frost_date_searching_path %>">Find frost dates for your location!</a>
+    </li>
+  </ul>
+  <% elsif %>
+  <ul>
+    <li>
     <a href="session/new">log in</a>
-    <a href="users/new">sign up</a>
-    <a href="<%= frost_date_searching_path %>">Find your frost dates!</a>
+    </li>
+    <li>
+    <a href="users/new">sign up</a> :Sign up to calculate sow by dates based on your local frost date.
+    </li>
+    <li>
+    <a href="<%= frost_date_searching_path %>">Find frost dates for your location!</a>
+    </li>
+  </ul>
   <% end %>
 </p>
 

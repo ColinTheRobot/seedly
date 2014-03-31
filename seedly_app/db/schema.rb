@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140329155035) do
   end
 
   create_table "frost_dates", force: true do |t|
-    t.integer  "zipcode"
+    t.integer  "zipcode" # delete this
     t.date     "prob_fifty_percent"
     t.date     "pob_ten_percent"
     t.date     "prob_nintey_percent"

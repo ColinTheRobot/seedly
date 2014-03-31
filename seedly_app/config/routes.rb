@@ -26,11 +26,11 @@ SeedlyApp::Application.routes.draw do
   post '/session' => "session#create"
   get '/logout' => "session#destroy"
 
-  get 'frost_date/search' => "frost_dates#search_frost_date"
-  get 'frost_date/searching' => "frost_dates#search"
-  get 'frost_date/search_frost_date' => "frost_dates#show"
 
-  # get 'frost_dates/search' => "frost_dates#show"
+  get 'frost_date/search' => "frost_dates#search_frost_date" #getting input from the user
+  get 'frost_date/searching' => "frost_dates#search" #process of searching
+  get 'frost_date/search_frost_date' => "frost_dates#show" #render in show
+  post 'frost_date/search_frost_date' => "frost_dates#create" #if logged in save data to db
 
   resources :users
   # resources :frost_dates

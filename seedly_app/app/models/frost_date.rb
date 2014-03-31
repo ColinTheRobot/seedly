@@ -35,10 +35,10 @@ class FrostDate < ActiveRecord::Base
       prob_fifty = thirty_two.fetch("prob_50")
       prob_ten = thirty_two.fetch("prob_10")
 
+   # FrostDate.save_to_db(prob_ninety, prob_fifty, prob_ten)
 
       month_ninety = FrostDate.get_months(prob_ninety)
       day_ninety = prob_ninety.slice(2,4)
-      binding.pry
 
       month_fifty = FrostDate.get_months(prob_fifty)
       day_fifty = prob_fifty.slice(2,4)
@@ -46,9 +46,24 @@ class FrostDate < ActiveRecord::Base
       month_ten = FrostDate.get_months(prob_ten)
       day_ten = prob_ten.slice(2,4)
 
-  frost_date_array = [month_ninety, day_ninety, month_fifty, day_fifty, month_ten, day_ten]
+  # user_data = [prob_ninety, prob_fifty, prob_ten]
+  frost_date_array = [month_ninety, day_ninety, month_fifty, day_fifty, month_ten, day_ten, prob_ninety, prob_fifty, prob_ten]
 
   end
+
+#tried to save to the database using this method. Errored out at the if logged in.
+  # def self.save_to_db(date_one, date_two, date_three)
+  #   if logged_in?
+  #     @frost_dates = FrostDate.new(
+  #       prob_nintey_percent: date_one,
+  #       prob_fifty_percent: date_two,
+  #       prob_ten_percent: date_three
+  #       )
+  #     @frost_dates.save
+  #   else
+  #   end
+  # end
+
 
   def self.get_months(probs)
     month = probs.slice(0, 2)
