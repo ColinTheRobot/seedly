@@ -1,3 +1,21 @@
+# == Route Map (Updated 2014-03-31 09:56)
+#
+#       Prefix Verb   URI Pattern               Controller#Action
+#         root GET    /                         welcome#index
+#  session_new GET    /session/new(.:format)    session#new
+#      session POST   /session(.:format)        session#create
+#       logout GET    /logout(.:format)         session#destroy
+# frost_dates_search GET    /dates/search(.:format)   frost_dates#search
+#        users GET    /users(.:format)          users#index
+#              POST   /users(.:format)          users#create
+#     new_user GET    /users/new(.:format)      users#new
+#    edit_user GET    /users/:id/edit(.:format) users#edit
+#         user GET    /users/:id(.:format)      users#show
+#              PATCH  /users/:id(.:format)      users#update
+#              PUT    /users/:id(.:format)      users#update
+#              DELETE /users/:id(.:format)      users#destroy
+#
+
 SeedlyApp::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -7,7 +25,8 @@ SeedlyApp::Application.routes.draw do
   get '/session/new' => "session#new"
   post '/session' => "session#create"
   get '/logout' => "session#destroy"
-  get 'dates/search', to: 'dates#search'
+  get 'frost_dates/search' => "frost_dates#search"
+  post 'frost_dates/search' => "frost_dates#get_results"
 
   resources :users
   # resources :frost_dates
