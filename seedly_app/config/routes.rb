@@ -7,9 +7,10 @@ SeedlyApp::Application.routes.draw do
   get '/session/new' => "session#new"
   post '/session' => "session#create"
   get '/logout' => "session#destroy"
+  get 'dates/search', to: 'dates#search'
 
   resources :users
-  resources :frost_dates
+  # resources :frost_dates
 
 
   # Example of regular route:
