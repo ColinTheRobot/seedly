@@ -4,21 +4,26 @@ class FrostDatesController < ApplicationController
   end
 
   def search
+
   end
 
-  def get_results
+
+  def search_frost_date
     latitude = params[:latitude]
     longitude = params[:longitude]
-    FrostDate.get_probabilities(latitude, longitude)
-
-
+    @frost_dates = FrostDate.get_probabilities(latitude, longitude)
+    render :show
   end
 
   def show
-    @prob_ninety
-
-   # @month_ninety = FrostDate.get_months(@prob_ninety)
+    @frost_dates
   end
+
+  # def show
+  #   # @prob_ninety
+
+  #  # @month_ninety = FrostDate.get_months(@prob_ninety)
+  # end
   # def search
   #   zipcode = @dates
   #  # returns a string with an array of hashes of stations

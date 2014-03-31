@@ -25,9 +25,12 @@ SeedlyApp::Application.routes.draw do
   get '/session/new' => "session#new"
   post '/session' => "session#create"
   get '/logout' => "session#destroy"
-  get 'frost_dates/search' => "frost_dates#search"
-  post 'frost_dates/search' => "frost_dates#show"
-  #get 'frost_dates/search' => "frost_dates#show"
+
+  get 'frost_date/search' => "frost_dates#search_frost_date"
+  get 'frost_date/searching' => "frost_dates#search"
+  get 'frost_date/search_frost_date' => "frost_dates#show"
+
+  # get 'frost_dates/search' => "frost_dates#show"
 
   resources :users
   # resources :frost_dates
