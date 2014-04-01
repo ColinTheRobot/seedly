@@ -33,6 +33,7 @@ SeedlyApp::Application.routes.draw do
   post 'frost_date/search_frost_date' => "frost_dates#create" #if logged in save data to db
 
   resources :users
+  resource :seeds
   # resources :frost_dates
 
 

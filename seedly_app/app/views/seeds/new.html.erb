@@ -1,9 +1,61 @@
 
+<ul>
 
 <%= form_for @seed do |f| %>
-  <%= f.label(:weeks) %>
-  <%= f.text_field(:) %>
-  <%= f.label(:image_url) %>
-  <%= f.text_field(:image_url) %>
+<li>
+  <%= f.label(:variety) %>
+  <%= f.text_field(:variety) %>
+</li>
+<li>
+  <%= f.label(:suggested_sowing_date) %>
+  <%= f.text_field(:suggested_sowing_date) %>
+</li>
+<li>
+  <%= f.label(:date_sown) %>
+  <%= f.text_field(:date_sown) %>
+</li>
+<li>
+  <%= f.label(:germ_soil_temp) %>
+  <%= f.text_field(:germ_soil_temp) %>
+</li>
+<li>
+  <%= f.label(:seed_depth) %>
+  <%= f.text_field(:seed_depth) %>
+</li>
+<li>
+  <%= f.label(:germination_days) %>
+  <%= f.text_field(:germination_days) %>
+</li>
+<li>
+  <%= f.label(:height_when_mature) %>
+  <%= f.text_field(:height_when_mature) %>
+</li>
+<li>
+  <%= f.label(:thin_to_grow) %>
+  <%= f.text_field(:thin_to_grow) %>
+</li>
+<li>
+  <%= f.label(:optimum_soil_ph) %>
+  <%= f.text_field(:optimum_soil_ph) %>
+</li>
+<li>
+  <%= f.label(:optimum_soil_temp) %>
+  <%= f.text_field(:optimum_soil_temp) %>
+</li>
+<li>
+  <%= f.label(:days_to_harvest) %>
+  <%= f.text_field(:days_to_harvest) %>
+</li>
+<li>
+  <%= f.label(:planting_info) %>
+  <%= f.text_field(:planting_info) %>
+</li>
+<li>
+  <%= f.label(:bed_id) %>
+  <%= f.text_field(:bed_id) %>
+</li>
+
   <%= f.submit %>
 <% end %>
+</li>
+</ul>
