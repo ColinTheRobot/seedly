@@ -9,7 +9,6 @@ class SeedsController < ApplicationController
   end
 
   def create
-    binding.pry
     @seed = Seed.new(seed_params)
     current_user.seeds << @seed
       if @seed.save
