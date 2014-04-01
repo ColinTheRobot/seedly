@@ -1,0 +1,19 @@
+
+
+<%= link_to "Home", root_path %>
+
+<% @seeds.each do |seed| %>
+  <li><%= seed.variety %></li>
+  <li><%= seed.suggested_sowing_date %></li>
+  <li><%= seed.date_sown %></li>
+  <li><%= seed.germ_soil_temp %></li>
+  <li><%= seed.seed_depth %></li>
+  <li><%= seed.germination_days%></li>
+  <li><%= seed.height_when_mature %></li>
+  <li><%= seed.thin_to_grow %></li>
+  <li><%= seed.optimum_soil_ph %></li>
+  <li><%= seed.optimum_soil_temp %></li>
+  <li><%= seed.days_to_harvest %></li>
+  <li><%= seed.planting_info %></li>
+  <li><%= seed.bed_id %></li>
+<% end %>

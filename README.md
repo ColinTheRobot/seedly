@@ -43,3 +43,16 @@
                       "prob_30" => "0604",
                       "prob_20" => "0609",
                       "prob_10" => "0616"
+
+
+[1] pry(main)> 2.days.ago
+=> Sat, 29 Mar 2014 21:29:38 UTC +00:00
+[2] pry(main)> 6.days.ago
+=> Tue, 25 Mar 2014 21:29:42 UTC +00:00
+[3] pry(main)> Date.today
+=> Mon, 31 Mar 2014
+[4] pry(main)> Date.parse("September 6th, 2014")
+=> Sat, 06 Sep 2014
+[5] pry(main)> Date.parse("September 6th, 2014") - 2.weeks
+=> Sat, 23 Aug 2014
+[6] pry(main)>

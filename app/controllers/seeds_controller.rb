@@ -9,8 +9,9 @@ class SeedsController < ApplicationController
   end
 
   def create
+    binding.pry
     @seed = Seed.new(seed_params)
-    # @seed.user_id << @current_user
+    current_user.seeds << @seed
       if @seed.save
         redirect_to("/")
       else
@@ -19,6 +20,8 @@ class SeedsController < ApplicationController
   end
 
   def show
+    @seeds = Seed.all(:user_id == current_user[:id])
+
   end
 
   private
@@ -36,7 +39,6 @@ class SeedsController < ApplicationController
       :optimum_soil_temp,
       :days_to_harvest,
       :planting_info,
-      :user_id,
       :bed_id
       )
   end

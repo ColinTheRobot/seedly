@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401185934) do
+ActiveRecord::Schema.define(version: 20140401231332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,16 +35,16 @@ ActiveRecord::Schema.define(version: 20140401185934) do
 
   create_table "seeds", force: true do |t|
     t.text     "variety"
-    t.date     "suggested_sowing_date"
-    t.date     "date_sown"
-    t.integer  "germ_soil_temp"
-    t.integer  "seed_depth"
-    t.integer  "germination_days"
-    t.integer  "height_when_mature"
-    t.integer  "thin_to_grow"
-    t.integer  "optimum_soil_ph"
-    t.integer  "optimum_soil_temp"
-    t.integer  "days_to_harvest"
+    t.text     "suggested_sowing_date"
+    t.text     "date_sown"
+    t.text     "germ_soil_temp"
+    t.text     "seed_depth"
+    t.text     "germination_days"
+    t.text     "height_when_mature"
+    t.text     "thin_to_grow"
+    t.text     "optimum_soil_ph"
+    t.text     "optimum_soil_temp"
+    t.text     "days_to_harvest"
     t.text     "planting_info"
     t.integer  "user_id"
     t.integer  "bed_id"

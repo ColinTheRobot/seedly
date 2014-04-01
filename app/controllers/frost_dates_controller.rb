@@ -22,6 +22,7 @@ class FrostDatesController < ApplicationController
         prob_ten_percent: probability_dates_raw[2],
         user_id: session[:user_id]
         )
+        # current_user.frost_date << @frost_dates
         @frost_dates.save
       end
 
