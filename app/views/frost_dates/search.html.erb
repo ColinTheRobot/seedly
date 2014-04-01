@@ -1,0 +1,15 @@
+Enter your lat/long:
+(zipcode not yet implemented)
+
+<%= form_tag frost_date_search_path, method: "get" do %>
+ <!--  Not implemented yet
+  ||
+   f.label(:zipcode) %>
+  f.text_field(:zipcode) %>
+  || -->
+  <%= label_tag :latitude %>
+  <%= text_field_tag :latitude %>
+  <%= label_tag :longitude %>
+  <%= text_field_tag :longitude %>
+  <%= submit_tag :search %>
+<% end %>

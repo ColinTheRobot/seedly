@@ -1,0 +1,31 @@
+<h1>Seedly</h1>
+
+<p>
+  <% if logged_in? %>
+  <ul>
+    <p>Welcome back <%= current_user.name %></p>
+    <li>
+      <a href="/logout">logout</a>
+    </li>
+    <li>
+      <a href="<%= frost_date_searching_path %>">Find frost dates for your location!</a>
+    </li>
+    <li>
+      <a href="<%= new_seeds_path %>">Add seed</a>
+    </li>
+  </ul>
+  <% elsif %>
+  <ul>
+    <li>
+    <a href="session/new">log in</a>
+    </li>
+    <li>
+    <a href="users/new">sign up</a> :Sign up to calculate sow by dates based on your local frost date.
+    </li>
+    <li>
+    <a href="<%= frost_date_searching_path %>">Find frost dates for your location!</a>
+    </li>
+  </ul>
+  <% end %>
+</p>
+
