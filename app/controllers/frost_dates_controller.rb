@@ -17,10 +17,10 @@ class FrostDatesController < ApplicationController
         # user_dates = FrostDate.save_to_db(probability_dates_raw)
 
         @frost_dates = FrostDate.new(
-        prob_nintey_percent: probability_dates_raw[0],
+        prob_ninety_percent: probability_dates_raw[0],
         prob_fifty_percent: probability_dates_raw[1],
         prob_ten_percent: probability_dates_raw[2]
-        # user_id: current_user.id
+        user_id: current_user.id
         )
         @frost_dates.save
       end
