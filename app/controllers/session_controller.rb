@@ -4,8 +4,6 @@ class SessionController < ApplicationController
   end
 
   def create
-    @current_user
-    binding.pry
     user = User.find_by(email: params[:email])
       if user && user.authenticate(params[:password])
         session[:user_id] = user.id

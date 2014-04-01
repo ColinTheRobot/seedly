@@ -11,8 +11,18 @@ class FrostDatesController < ApplicationController
     longitude = params[:longitude]
     station_id = FrostDate.get_station(latitude, longitude)
     probability_dates_raw = FrostDate.get_raw_probabilities(station_id)
+      binding.pry
       if logged_in?
-        FrostDate.save_to_db(probability_dates_raw)
+        binding.pry
+        # user_dates = FrostDate.save_to_db(probability_dates_raw)
+
+        @frost_dates = FrostDate.new(
+        prob_nintey_percent: probability_dates_raw[0],
+        prob_fifty_percent: probability_dates_raw[1],
+        prob_ten_percent: probability_dates_raw[2]
+        # user_id: current_user.id
+        )
+        @frost_dates.save
       end
 
     @month_ninety = FrostDate.get_months(probability_dates_raw[0])

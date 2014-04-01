@@ -56,19 +56,14 @@ class FrostDate < ActiveRecord::Base
     months_hash.fetch(month)
   end
 
-  def self.save_to_db(array)
-     binding.pry
-    if logged_in?
-      #does this know to connect to the current user id's session or not?
-      # user = User.find_by(id: session[:user_id])
-      @frost_dates = FrostDate.new(
-        prob_nintey_percent: array[0],
-        prob_fifty_percent: array[1],
-        prob_ten_percent: array[2]
-        )
-      @frost_dates.save
-    end
-  end
+  # def self.save_to_db(array)
+  #     @frost_dates = FrostDate.new(
+  #       prob_nintey_percent: array[0],
+  #       prob_fifty_percent: array[1],
+  #       prob_ten_percent: array[2]
+  #       )
+  #     @frost_dates.save
+  # end
 end
 
 # - HTTParty.get('http://farmsense-prod.apigee.net/v1/frostdates/probabilities/?station=104455&season=1')
