@@ -3,6 +3,8 @@ class FrostDatesController < ApplicationController
   end
 
   def search
+
+    render :search
   end
 
 
@@ -11,9 +13,7 @@ class FrostDatesController < ApplicationController
     longitude = params[:longitude]
     station_id = FrostDate.get_station(latitude, longitude)
     probability_dates_raw = FrostDate.get_raw_probabilities(station_id)
-      binding.pry
       if logged_in?
-        binding.pry
         # user_dates = FrostDate.save_to_db(probability_dates_raw)
 
         @frost_dates = FrostDate.new(
