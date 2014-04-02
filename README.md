@@ -30,7 +30,7 @@ In the coming months farmsesnse will be adding an API key. The code will need to
 
 It also provides an easy way for users to store information about their seeds and where they are planted.
 
-##### V. 0.0.2
+##### V. 0.1.1
 
 `V. 0.0.2` will provide a form for users to calculate when they should plant any individual seed based on the frost date probabilities for their location. It will provide users with the ability to create and store `beds`, which will contain any seed info they upload into it. Finally, the next update will allow users to find their frost date averages by location or zipcode rather than by latitude and longitude.
 
