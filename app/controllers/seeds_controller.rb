@@ -1,7 +1,7 @@
 class SeedsController < ApplicationController
 
   def index
-    @seeds = Seed.all
+    @seeds = Seed.all(:user_id == current_user[:id])
   end
 
   def new
@@ -18,9 +18,23 @@ class SeedsController < ApplicationController
       end
   end
 
-  def show
-    @seeds = Seed.all(:user_id == current_user[:id])
+  def edit
+    @seed = Seed.find(params[:id])
+  end
 
+  def update
+    @seed = Seed.find(params[:id])
+    if @seed.update(seed_params)
+      redirect_to seeds_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    seed = Seed.find(params[:id])
+    seed.destroy
+    redirect_to seeds_path
   end
 
   private
