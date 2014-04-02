@@ -37,7 +37,7 @@ It also provides an easy way for users to store information about their seeds an
 
 ### Notes for the developer.
 
-Farms sense returns a probabiliity hash for srping and fall that looks like the following. This app is only concerned with `"prob_90"` but includes `"prob_50"` and `"prob_ten"` as supplemental information for the user.
+Farmesense returns a probabiliity hash for spring and autumn that looks like the following. This app is only concerned with `"prob_90"` but includes `"prob_50"` and `"prob_10"` for autumn as supplemental information climate normals for the user.
 
 ```
          [0] {
