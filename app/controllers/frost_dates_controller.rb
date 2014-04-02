@@ -3,7 +3,6 @@ class FrostDatesController < ApplicationController
   end
 
   def search
-
     render :search
   end
 

@@ -1,23 +1,45 @@
 
-# SEEDLY
+# SEEDLY — v. 0.0.1
 
-## API -- uses Farmsense
-
-- http://www.farmsense.net/
-
-## pivotal tracker
-
-- https://www.pivotaltracker.com/s/projects/1047464#
 ---
 
-# notes for myself DELETE/EDIT when submitting
+### Heroku
 
-- HTTParty.get('http://farmsense-prod.apigee.net/v1/frostdates/stations/?lat=43.42332138&lon=-112.01243728') returns a string with an array of hashes of stations
 
-- HTTParty.get('http://farmsense-prod.apigee.net/v1/frostdates/probabilities/?station=104455&season=1') returns hash of probabilities for the station
+Seedly is available at the following heroku link. All currently available features are accessible and functioning. Any error is your own fault.
 
-  - JSON.parse(probabilities)
+  http://blueberry-cake-1111.herokuapp.com/
 
+### pivotal tracker
+
+
+  https://www.pivotaltracker.com/s/projects/1047464#
+
+
+### API -- uses Farmsense
+
+  http://www.farmsense.net/
+
+In the coming months farmsesnse will be adding an API key. The code will need to be updated to match this change.
+
+---
+
+## ABOUT
+
+`Seedly` is an app for gardeners and planters with a focus on seed planting. The app provides the user with Autumn frost date averages by lattitute and longitude.
+
+It also provides an easy way for users to store information about their seeds and where they are planted.
+
+##### V. 0.0.2
+
+`V. 0.0.2` will provide a form for users to calculate when the should plant any individual seed based on the frost date probabilities for their location. It will provide users with the ability to create and store `beds`, which will contain any seed info they upload into it. Finally, the next update will allow users to find their frost date averages by location or zipcode rather than by latitude and longitude.
+
+
+### Notes for the developer.
+
+Farms sense returns a probabiliity hash for srping and fall that looks like the following. This app is only concerned with `"prob_90"` but includes `"prob_50"` and `"prob_ten"` as supplemental information for the user.
+
+```
          [0] {
                     "season_id" => "1",
         "temperature_threshold" => "36",
@@ -43,7 +65,11 @@
                       "prob_30" => "0604",
                       "prob_20" => "0609",
                       "prob_10" => "0616"
+```
 
+This is an example of date/time using rails date magic. Implementation TBD.
+
+```
 
 [1] pry(main)> 2.days.ago
 => Sat, 29 Mar 2014 21:29:38 UTC +00:00
@@ -55,4 +81,5 @@
 => Sat, 06 Sep 2014
 [5] pry(main)> Date.parse("September 6th, 2014") - 2.weeks
 => Sat, 23 Aug 2014
-[6] pry(main)>
+
+```
