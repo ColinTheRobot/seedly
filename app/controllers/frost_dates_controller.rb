@@ -6,7 +6,10 @@ class FrostDatesController < ApplicationController
     render :search
   end
 
-
+# search_frost_date takes the user input lat and long to find a hash of the nearest weather stations to their locations.
+# It then returns the raw dates for 90%, 50% and 10% chance of frost at the users location.
+# The dates are in the format of a four integer string "0820". "08" represents the month and "20" represents the day.
+# the method then saves the raw frost dates to the frost_dates table, if the user is logged in.
   def search_frost_date
     latitude = params[:latitude]
     longitude = params[:longitude]

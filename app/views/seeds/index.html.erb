@@ -1,6 +1,9 @@
 
 
 <%= link_to "Home", root_path %>
+
+<h1>Your seeds:</h1>
+
 <ul>
 <% @seeds.each do |seed| %>
   <li>Variety: <%= seed.variety %></li>

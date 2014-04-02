@@ -1,12 +1,9 @@
-Enter your lat/long:
-(zipcode not yet implemented)
+<p>Enter your lat/long:</p>
+<p>hint* for accurate frost date probabilities your latitude and longitude needs to be EXACT</p>
+<p>(zipcode not yet implemented)</p>
 
 <%= form_tag frost_date_search_path, method: "get" do %>
- <!--  Not implemented yet
-  ||
-   f.label(:zipcode) %>
-  f.text_field(:zipcode) %>
-  || -->
+
   <%= label_tag :latitude %>
   <%= text_field_tag :latitude %>
   <%= label_tag :longitude %>

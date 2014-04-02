@@ -12,15 +12,20 @@
 #
 
 class FrostDate < ActiveRecord::Base
-  # include 'HTTParty'
   belongs_to :user
 
+# self.get_stations takes the lat/long and returns a multidimensional array of hashes of the closest weather stations to the user
+# it outputs the station_id of the closest station (always the first station returned).
   def self.get_station(latitude, longitude)
     raw_response = HTTParty.get("http://farmsense-prod.apigee.net/v1/frostdates/stations/?lat=#{latitude}8&lon=#{longitude}")
     response = JSON.parse(raw_response)
     station_id = response[0]["id"]
   end
 
+# self.get_raw_probabilities finds the chances for frost for the given station.
+# it returns an array of hashes that contain the full range of probabilitis for 10% chance of frost to 90% chance of frost for 5 temperature thresholds
+# 16º, 20º, 24º, 28º, 32º and 36º. This method is only concerned with the temperature threshold 32º.
+# prob_ninety, prob_fifty, prob_ten are raw date outputs——four integer string "0820". "08" represents the month and "20" represents the day.
   def self.get_raw_probabilities(station_id)
    dates_raw = HTTParty.get("http://farmsense-prod.apigee.net/v1/frostdates/probabilities/?station=#{station_id}&season=2")
         dates_response = JSON.parse(dates_raw)
@@ -55,20 +60,4 @@ class FrostDate < ActiveRecord::Base
     }
     months_hash.fetch(month)
   end
-
-  # def self.save_to_db(array)
-  #     @frost_dates = FrostDate.new(
-  #       prob_nintey_percent: array[0],
-  #       prob_fifty_percent: array[1],
-  #       prob_ten_percent: array[2]
-  #       )
-  #     @frost_dates.save
-  # end
 end
-
-# - HTTParty.get('http://farmsense-prod.apigee.net/v1/frostdates/probabilities/?station=104455&season=1')
-# #for geocoder
-#     # query = params[:zipcode]
-    # lattitude = query[0]["lat"]
-    # longitude = query[0]["lon"]
-    # @zipocde = {}
