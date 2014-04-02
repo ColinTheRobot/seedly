@@ -23,5 +23,5 @@
 
 class Seed < ActiveRecord::Base
   belongs_to :user
-  belongs_to :beds
+  belongs_to :bed
 end

@@ -1,0 +1,67 @@
+digraph SeedlyApp {
+rankdir = "LR";
+ranksep = "0.5";
+nodesep = "0.4";
+pad = "0.4,0.4";
+margin = "0,0";
+concentrate = "true";
+labelloc = "t";
+fontsize = "13";
+fontname = "Arial Bold";
+node[ shape  =  "Mrecord" , fontsize  =  "10" , fontname  =  "Arial" , margin  =  "0.07,0.05" , penwidth  =  "1.0"];
+edge[ fontname  =  "Arial" , fontsize  =  "7" , dir  =  "both" , arrowsize  =  "0.9" , penwidth  =  "1.0" , labelangle  =  "32" , labeldistance  =  "1.8"];
+label = "SeedlyApp domain model\n\n";
+m_Bed [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Bed</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="description">description <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">text</font></td></tr>
+</table>
+>];
+m_FrostDate [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">FrostDate</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="prob_fifty_percent">prob_fifty_percent <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="prob_ninety_percent">prob_ninety_percent <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="prob_ten_percent">prob_ten_percent <font face="Arial Italic" color="grey60">text</font></td></tr>
+</table>
+>];
+m_Seed [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Seed</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="date_sown">date_sown <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="days_to_harvest">days_to_harvest <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="germ_soil_temp">germ_soil_temp <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="germination_days">germination_days <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="height_when_mature">height_when_mature <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="optimum_soil_ph">optimum_soil_ph <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="optimum_soil_temp">optimum_soil_temp <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="planting_info">planting_info <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="seed_depth">seed_depth <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="suggested_sowing_date">suggested_sowing_date <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="thin_to_grow">thin_to_grow <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="variety">variety <font face="Arial Italic" color="grey60">text</font></td></tr>
+</table>
+>];
+m_User [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">User</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="email">email <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="frostdate_id">frostdate_id <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">text ∗</font></td></tr>
+  <tr><td align="left" width="130" port="password_digest">password_digest <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+>];
+  m_Bed -> m_Seed [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_User -> m_Bed [arrowhead = "normal", arrowtail = "none", weight = "2"];
+  m_User -> m_FrostDate [arrowhead = "none", arrowtail = "none", weight = "2"];
+  m_User -> m_Seed [arrowhead = "normal", arrowtail = "none", weight = "2"];
+}
