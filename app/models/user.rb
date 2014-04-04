@@ -19,4 +19,5 @@ class User < ActiveRecord::Base
 
   validates(:name, { :presence => true})
   validates(:name, { :presence => {case_sensitive: false}})
+  validates_length_of :password, in: 8..16
 end
