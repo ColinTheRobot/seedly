@@ -5,28 +5,32 @@
   <ul>
     <p>Welcome back <%= current_user.name %></p>
     <li>
-      <a href="/logout">logout</a>
+      <%= link_to "logout", logout_path %>
     </li>
     <li>
-      <a href="<%= frost_date_searching_path %>">Find frost dates for your location!</a>
+      <%= link_to "Find Frost Dates by Locations", frost_date_searching_path %>
+
     </li>
     <li>
-      <a href="<%= new_seed_path %>">Add seed</a>
+      <%= link_to "Add a Seed", new_seed_path %>
+
     </li>
     <li>
-      <a href="<%= seeds_path %>">See your seeds</a>
+      <%= link_to "See Sour Seeds", seeds_path %>
+
     </li>
   </ul>
   <% elsif %>
   <ul>
     <li>
-    <a href="session/new">log in</a>
+      <%= link_to "Log In", session_new_path %>
+
     </li>
     <li>
-    <a href="users/new">sign up</a> :Sign up to calculate sow by dates based on your local frost date.
+      <%= link_to "Sign Up",  new_user_path %> :Sign up to calculate sow by dates based on your local frost date.
     </li>
     <li>
-    <a href="<%= frost_date_searching_path %>">Find frost dates for your location!</a>
+      <%= link_to "Find frost dates for your location!", frost_date_searching_path %>
     </li>
   </ul>
   <% end %>
