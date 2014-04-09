@@ -5,21 +5,27 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new({
-      name: params[:user][:name],
-      email: params[:user][:email],
-      password: params[:user][:password],
-      password_confirmation: params[:user][:password_confirmation]
-    })
-    if @user.save
-      redirect_to("/")
-    else
-      # render the new.html.erb file with @user
-      render :new
-    end
+    @user = User.new(user_params)
+      if @user.save
+        redirect_to("/")
+      else
+      # renders the new.html.erb file with @user
+        render :new
+      end
   end
 
   def show
     @user = current_user
+  end
+
+private
+
+  def user_params
+    params.require(:seed).permit(
+      :name,
+      :email,
+      :password,
+      :password_confirmation
+      )
   end
 end
