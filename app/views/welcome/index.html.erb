@@ -1,4 +1,4 @@
-<h1>Seedly</h1>
+  <h1>Seedly</h1>
 
 <p>
   <% if logged_in? %>
@@ -17,8 +17,12 @@
     </li>
     <li>
       <%= link_to "See Your Seeds", seeds_path %>
-
     </li>
+    <li>
+      <%= link_to "Quick 'Sow By' Calculator", so_by_dates_path %>
+    </li>
+
+
   </ul>
   <% elsif %>
   <ul>
@@ -31,6 +35,9 @@
     </li>
     <li>
       <%= link_to "Find frost dates for your location!", frost_date_searching_path %>
+    </li>
+    <li>
+      <%= link_to "Quick 'Sow By' Calculator", so_by_dates_path %>
     </li>
   </ul>
   <% end %>

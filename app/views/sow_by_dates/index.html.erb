@@ -1,0 +1,19 @@
+<p>If your seeds instructions offer a range</p>
+
+<%= form_tag so_by_dates_path, method: "post" do %>
+
+  <%= label_tag :from_week %>
+  <%= text_field_tag :from_week %>
+  <%= label_tag :to_week %>
+  <%= text_field_tag :to_week %>
+  <%= submit_tag :search %>
+<% end %>
+
+<p>If your seeds instructions offer a set time</p>
+
+<%= form_tag so_by_dates_path, method: "post" do %>
+
+  <%= label_tag :weeks %>
+  <%= text_field_tag :weeks %>
+  <%= submit_tag :search %>
+<% end %>

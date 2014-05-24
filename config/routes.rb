@@ -1,19 +1,38 @@
-# == Route Map (Updated 2014-03-31 09:56)
+# == Route Map (Updated 2014-05-24 12:33)
 #
-#       Prefix Verb   URI Pattern               Controller#Action
-#         root GET    /                         welcome#index
-#  session_new GET    /session/new(.:format)    session#new
-#      session POST   /session(.:format)        session#create
-#       logout GET    /logout(.:format)         session#destroy
-# frost_dates_search GET    /dates/search(.:format)   frost_dates#search
-#        users GET    /users(.:format)          users#index
-#              POST   /users(.:format)          users#create
-#     new_user GET    /users/new(.:format)      users#new
-#    edit_user GET    /users/:id/edit(.:format) users#edit
-#         user GET    /users/:id(.:format)      users#show
-#              PATCH  /users/:id(.:format)      users#update
-#              PUT    /users/:id(.:format)      users#update
-#              DELETE /users/:id(.:format)      users#destroy
+#                       Prefix Verb   URI Pattern                             Controller#Action
+#                         root GET    /                                       welcome#index
+#                  session_new GET    /session/new(.:format)                  session#new
+#                      session POST   /session(.:format)                      session#create
+#                       logout GET    /logout(.:format)                       session#destroy
+#            frost_date_search GET    /frost_date/search(.:format)            frost_dates#search_frost_date
+#         frost_date_searching GET    /frost_date/searching(.:format)         frost_dates#search
+# frost_date_search_frost_date GET    /frost_date/search_frost_date(.:format) frost_dates#show
+#                              POST   /frost_date/search_frost_date(.:format) frost_dates#create
+#                        users GET    /users(.:format)                        users#index
+#                              POST   /users(.:format)                        users#create
+#                     new_user GET    /users/new(.:format)                    users#new
+#                    edit_user GET    /users/:id/edit(.:format)               users#edit
+#                         user GET    /users/:id(.:format)                    users#show
+#                              PATCH  /users/:id(.:format)                    users#update
+#                              PUT    /users/:id(.:format)                    users#update
+#                              DELETE /users/:id(.:format)                    users#destroy
+#                        seeds GET    /seeds(.:format)                        seeds#index
+#                              POST   /seeds(.:format)                        seeds#create
+#                     new_seed GET    /seeds/new(.:format)                    seeds#new
+#                    edit_seed GET    /seeds/:id/edit(.:format)               seeds#edit
+#                         seed GET    /seeds/:id(.:format)                    seeds#show
+#                              PATCH  /seeds/:id(.:format)                    seeds#update
+#                              PUT    /seeds/:id(.:format)                    seeds#update
+#                              DELETE /seeds/:id(.:format)                    seeds#destroy
+#                  so_by_dates GET    /so_by_dates(.:format)                  so_by_dates#index
+#                              POST   /so_by_dates(.:format)                  so_by_dates#create
+#               new_so_by_date GET    /so_by_dates/new(.:format)              so_by_dates#new
+#              edit_so_by_date GET    /so_by_dates/:id/edit(.:format)         so_by_dates#edit
+#                   so_by_date GET    /so_by_dates/:id(.:format)              so_by_dates#show
+#                              PATCH  /so_by_dates/:id(.:format)              so_by_dates#update
+#                              PUT    /so_by_dates/:id(.:format)              so_by_dates#update
+#                              DELETE /so_by_dates/:id(.:format)              so_by_dates#destroy
 #
 
 SeedlyApp::Application.routes.draw do
@@ -34,6 +53,7 @@ SeedlyApp::Application.routes.draw do
 
   resources :users
   resources :seeds
+  resources :so_by_dates
   # resources :frost_dates
 
 
