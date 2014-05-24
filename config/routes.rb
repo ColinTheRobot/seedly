@@ -53,7 +53,7 @@ SeedlyApp::Application.routes.draw do
 
   resources :users
   resources :seeds
-  resources :so_by_dates
+  resources :sow_by_dates
   # resources :frost_dates
 
 

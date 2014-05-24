@@ -56,7 +56,7 @@ group :development, :test do
   gem 'jasmine'
   gem 'capybara'
   gem 'rails-erd'
-  gem 'coveralls'
+  gem 'coveralls', require: false
 end
 
 group :test do
