@@ -1,6 +1,11 @@
 
 # SEEDLY — v. 0.1.0
 
+[![Build Status](https://travis-ci.org/cohart/seedly.svg?branch=master)](https://travis-ci.org/cohart/seedly)
+
+[![Coverage Status](https://coveralls.io/repos/cohart/seedly/badge.png)](https://coveralls.io/r/cohart/seedly)
+
+
 ---
 
 ### Heroku

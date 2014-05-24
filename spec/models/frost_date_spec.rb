@@ -3,9 +3,6 @@ require 'spec_helper'
 
 describe FrostDate do
   it { should belong_to(:user) }
-
-
-
   describe FrostDate do
   it "should return a string" do
     raw_response = HTTParty.get("http://farmsense-prod.apigee.net/v1/frostdates/stations/?lat=428&lon=-112")
