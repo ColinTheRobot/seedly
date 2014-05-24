@@ -40,23 +40,29 @@ end
 # Uses geocoder to find lat long
 gem 'geocoder', '~> 1.1.9'
 
+
 group :development, :test do
-# rspec for rails. set up with `rails g rpsec:install`
-# https://github.com/rspec/rspec-rails
-  gem 'rspec-rails'
-# sets rails console to open in pry instead of irb
-# https://github.com/rweng/pry-rails
-  gem 'pry-rails'
-# command line tool. run `$ annotate`. annotates models with schema data
-# https://github.com/ctran/annotate_models
-  gem 'annotate', ">= 2.6.0"
-# one liners to test common rails functionality
-# https://github.com/thoughtbot/shoulda-matchers
-  gem 'shoulda-matchers'
-
- gem 'rails-erd'
-
+  gem 'simplecov', '~> 0.7.1'
+  gem 'factory_girl_rails'
+  gem 'spring'
+  gem 'guard' #watches folders for changes 'trip wire'
+  gem 'guard-rspec' #runs rspec
+  gem 'rspec-rails' #rspec for rails
+  gem 'pry-rails' #pry for rails
+  gem 'guard-bundler', require: false #watches the gem file
+  gem 'terminal-notifier-guard' #pops up guard notifier
+  gem 'shoulda-matchers' #tests validations/relationships on models
+  gem 'annotate'
+  gem 'jasmine'
+  gem 'capybara'
+  gem 'rails-erd'
+  gem 'coveralls'
 end
+
+group :test do
+  gem 'cucumber-rails', :require => false
+end
+
 
 # Use unicorn as the app server
 # gem 'unicorn'
