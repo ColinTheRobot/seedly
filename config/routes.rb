@@ -1,4 +1,4 @@
-# == Route Map (Updated 2014-05-24 12:33)
+# == Route Map (Updated 2014-06-03 14:50)
 #
 #                       Prefix Verb   URI Pattern                             Controller#Action
 #                         root GET    /                                       welcome#index
@@ -25,14 +25,14 @@
 #                              PATCH  /seeds/:id(.:format)                    seeds#update
 #                              PUT    /seeds/:id(.:format)                    seeds#update
 #                              DELETE /seeds/:id(.:format)                    seeds#destroy
-#                  so_by_dates GET    /so_by_dates(.:format)                  so_by_dates#index
-#                              POST   /so_by_dates(.:format)                  so_by_dates#create
-#               new_so_by_date GET    /so_by_dates/new(.:format)              so_by_dates#new
-#              edit_so_by_date GET    /so_by_dates/:id/edit(.:format)         so_by_dates#edit
-#                   so_by_date GET    /so_by_dates/:id(.:format)              so_by_dates#show
-#                              PATCH  /so_by_dates/:id(.:format)              so_by_dates#update
-#                              PUT    /so_by_dates/:id(.:format)              so_by_dates#update
-#                              DELETE /so_by_dates/:id(.:format)              so_by_dates#destroy
+#                 sow_by_dates GET    /sow_by_dates(.:format)                 sow_by_dates#index
+#                              POST   /sow_by_dates(.:format)                 sow_by_dates#create
+#              new_sow_by_date GET    /sow_by_dates/new(.:format)             sow_by_dates#new
+#             edit_sow_by_date GET    /sow_by_dates/:id/edit(.:format)        sow_by_dates#edit
+#                  sow_by_date GET    /sow_by_dates/:id(.:format)             sow_by_dates#show
+#                              PATCH  /sow_by_dates/:id(.:format)             sow_by_dates#update
+#                              PUT    /sow_by_dates/:id(.:format)             sow_by_dates#update
+#                              DELETE /sow_by_dates/:id(.:format)             sow_by_dates#destroy
 #
 
 SeedlyApp::Application.routes.draw do
@@ -50,10 +50,13 @@ SeedlyApp::Application.routes.draw do
   get 'frost_date/searching' => "frost_dates#search" #process of searching
   get 'frost_date/search_frost_date' => "frost_dates#show" #render in show
   post 'frost_date/search_frost_date' => "frost_dates#create" #if logged in save data to db
+  put 'sow_by_date' => "sow_by_dates#update"
+  get  'sow_by_dates' => "sow_by_dates#index"
 
   resources :users
   resources :seeds
-  resources :sow_by_dates
+
+  # resources :sow_by_dates
   # resources :frost_dates
 
 

@@ -3,10 +3,10 @@
 # Table name: frost_dates
 #
 #  id                  :integer          not null, primary key
-#  zipcode             :integer
-#  prob_fifty_percent  :date
-#  pob_ten_percent     :date
-#  prob_nintey_percent :date
+#  prob_fifty_percent  :text
+#  prob_ten_percent    :text
+#  prob_ninety_percent :text
+#  user_id             :integer
 #  created_at          :datetime
 #  updated_at          :datetime
 #

@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: frost_dates
+#
+#  id                  :integer          not null, primary key
+#  prob_fifty_percent  :text
+#  prob_ten_percent    :text
+#  prob_ninety_percent :text
+#  user_id             :integer
+#  created_at          :datetime
+#  updated_at          :datetime
+#
+
 require 'spec_helper'
 
 

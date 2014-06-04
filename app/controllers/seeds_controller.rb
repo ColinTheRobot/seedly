@@ -1,7 +1,7 @@
 class SeedsController < ApplicationController
 
   def index
-    @seeds = Seed.all(:user_id == current_user[:id])
+    @seeds = Seed.where(user_id: current_user[:id])
   end
 
   def new

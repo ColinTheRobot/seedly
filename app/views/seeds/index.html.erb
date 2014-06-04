@@ -4,11 +4,15 @@
 
 <h3>Your seeds:</h3>
 
+
 <ul>
 <% @seeds.each do |seed| %>
+<% binding.pry %>
   <li>Variety: <%= seed.variety %></li>
 
   <li>Suggested Sowing Date: <%= seed.suggested_sowing_date %></li>
+
+  <li>Calculated Sow By Date: <%= seed.calculated_sow_by_dates %></li>
 
   <li>Date Sown: <%= seed.date_sown %></li>
 
