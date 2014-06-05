@@ -40,6 +40,8 @@ end
 # Uses geocoder to find lat long
 gem 'geocoder', '~> 1.1.9'
 
+gem 'rails_12factor'
+
 
 group :development, :test do
   gem 'simplecov', '~> 0.7.1'
