@@ -1,63 +1,50 @@
 <!-- This form is for the user to create or update information about individual seeds -->
 <!-- There are some fields that might need to be implimented in here, the form currently takes only text. Future versions will accept dates as they exist in Active Record -->
 
-<ul>
+<div class='body-container'>
+    <div class='form-container'>
+      <%= form_for @seed do |f| %>
+        <%= f.label :variety %>
+        <%= f.text_field :variety, placeholder: 'Variety' %>
 
-<%= form_for @seed do |f| %>
-<li>
-  <%= f.label(:variety) %>
-  <%= f.text_field(:variety) %>
-</li>
-<li>
-  <%= f.label(:suggested_sowing_date) %>
-  <%= f.text_field(:suggested_sowing_date) %>
-</li>
-<li>
-  <%= f.label(:date_sown) %>
-  <%= f.text_field(:date_sown) %>
-</li>
-<li>
-  <%= f.label(:germ_soil_temp) %>
-  <%= f.text_field(:germ_soil_temp) %>
-</li>
-<li>
-  <%= f.label(:seed_depth) %>
-  <%= f.text_field(:seed_depth) %>
-</li>
-<li>
-  <%= f.label(:germination_days) %>
-  <%= f.text_field(:germination_days) %>
-</li>
-<li>
-  <%= f.label(:height_when_mature) %>
-  <%= f.text_field(:height_when_mature) %>
-</li>
-<li>
-  <%= f.label(:thin_to_grow) %>
-  <%= f.text_field(:thin_to_grow) %>
-</li>
-<li>
-  <%= f.label(:optimum_soil_ph) %>
-  <%= f.text_field(:optimum_soil_ph) %>
-</li>
-<li>
-  <%= f.label(:optimum_soil_temp) %>
-  <%= f.text_field(:optimum_soil_temp) %>
-</li>
-<li>
-  <%= f.label(:days_to_harvest) %>
-  <%= f.text_field(:days_to_harvest) %>
-</li>
-<li>
-  <%= f.label(:planting_info) %>
-  <%= f.text_field(:planting_info) %>
-</li>
-<li>
-  <%= f.label(:bed_id) %>
-  <%= f.text_field(:bed_id) %>
-</li>
+        <%= f.label :suggested_sowing_date %>
+        <%= f.text_field :suggested_sowing_date, placeholder: 'suggested sowing date' %>
 
-  <%= f.submit %>
-<% end %>
-</li>
-</ul>
+        <%= f.label :date_sown %>
+        <%= f.text_field :date_sown, placeholder: 'date sown' %>
+
+        <%= f.label :germ_soil_temp %>
+        <%= f.text_field :germ_soil_temp, placeholder: 'germination soil temp' %>
+
+        <%= f.label :seed_depth %>
+        <%= f.text_field :seed_depth, placeholder: 'seed depth' %>
+
+        <%= f.label :germination_days %>
+        <%= f.text_field :germination_days, placeholder: 'germination days' %>
+
+        <%= f.label :height_when_mature %>
+        <%= f.text_field :height_when_mature, placeholder: 'height when mature' %>
+
+        <%= f.label :thin_to_grow %>
+        <%= f.text_field :thin_to_grow, placeholder: 'thin to grow' %>
+
+        <%= f.label :optimum_soil_ph %>
+        <%= f.text_field :optimum_soil_ph, placeholder: 'omtimum soil ph' %>
+
+        <%= f.label :optimum_soil_temp %>
+        <%= f.text_field :optimum_soil_temp, placeholder: 'optimum soil temp' %>
+
+        <%= f.label :days_to_harvest %>
+        <%= f.text_field :days_to_harvest, placeholder: 'days to harvest' %>
+
+        <%= f.label :planting_info %>
+        <%= f.text_field :planting_info, placeholder: 'planting info' %>
+
+        <%= f.label :bed_id %>
+        <%= f.text_field :bed_id, placeholder: 'Bed label' %>
+
+        <%= f.submit %>
+      <% end %>
+    </div>
+<div> <!-- body-container -->
+

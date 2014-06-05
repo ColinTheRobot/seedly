@@ -1,45 +1,45 @@
+<div class='body-container'>
   <h1>Seedly</h1>
 
-<p>
-  <% if logged_in? %>
-  <ul>
-    <p>Welcome back <%= current_user.name %></p>
-    <li>
-      <%= link_to "logout", logout_path %>
-    </li>
-    <li>
-      <%= link_to "Find Frost Dates by Locations", frost_date_searching_path %>
+  <p>
+    <% if logged_in? %>
+    <ul>
+      <p>Welcome back <%= current_user.name %></p>
+      <li>
+        <%= link_to "logout", logout_path %>
+      </li>
+      <li>
+        <%= link_to "Find Frost Dates by Locations", frost_date_searching_path %>
 
-    </li>
-    <li>
-      <%= link_to "Add a Seed", new_seed_path %>
+      </li>
+      <li>
+        <%= link_to "Add a Seed", new_seed_path %>
 
-    </li>
-    <li>
-      <%= link_to "See Your Seeds", seeds_path %>
-    </li>
-    <li>
-      <%= link_to "Quick 'Sow By' Calculator", sow_by_dates_path %>
-    </li>
+      </li>
+      <li>
+        <%= link_to "See Your Seeds", seeds_path %>
+      </li>
+      <li>
+        <%= link_to "Quick 'Sow By' Calculator", sow_by_dates_path %>
+      </li>
 
+    </ul>
+    <% elsif %>
+    <ul>
+      <li>
+        <%= link_to "Log In", session_new_path %>
 
-  </ul>
-  <% elsif %>
-  <ul>
-    <li>
-      <%= link_to "Log In", session_new_path %>
-
-    </li>
-    <li>
-      <%= link_to "Sign Up",  new_user_path %> :Sign up to calculate sow by dates based on your local frost date.
-    </li>
-    <li>
-      <%= link_to "Find frost dates for your location!", frost_date_searching_path %>
-    </li>
-    <li>
-      <%= link_to "Quick 'Sow By' Calculator", sow_by_dates_path %>
-    </li>
-  </ul>
-  <% end %>
-</p>
-
+      </li>
+      <li>
+        <%= link_to "Sign Up",  new_user_path %> :Sign up to calculate sow by dates based on your local frost date.
+      </li>
+      <li>
+        <%= link_to "Find frost dates for your location!", frost_date_searching_path %>
+      </li>
+      <li>
+        <%= link_to "Quick 'Sow By' Calculator", sow_by_dates_path %>
+      </li>
+    </ul>
+    <% end %>
+  </p>
+</div>

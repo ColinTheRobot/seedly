@@ -1,52 +1,54 @@
 
 
 <%= link_to "Home", root_path %>
-
-<h3>Your seeds:</h3>
+<div class='body-container'>
+  <h3>Your seeds:</h3>
 
 
 <ul>
-<% @seeds.each do |seed| %>
-  <li>Variety: <%= seed.variety %></li>
+  <% @seeds.each do |seed| %>
+    <ul class='your-seeds'>
+      <li>Variety: <%= seed.variety %></li>
 
-  <li>Suggested Sowing Date: <%= seed.suggested_sowing_date %></li>
+      <li>Suggested Sowing Date: <%= seed.suggested_sowing_date %></li>
 
-  <li>Calculated Sow By Date: <%= seed.calculated_sow_by_dates %></li>
+      <li>Calculated Sow By Date: <%= seed.calculated_sow_by_dates %></li>
 
-  <li>Date Sown: <%= seed.date_sown %></li>
+      <li>Date Sown: <%= seed.date_sown %></li>
 
-  <li>Germination Soil Temp:<%= seed.germ_soil_temp %></li>
+      <li>Germination Soil Temp:<%= seed.germ_soil_temp %></li>
 
-  <li>Seed Depth: <%= seed.seed_depth %></li>
+      <li>Seed Depth: <%= seed.seed_depth %></li>
 
-  <li>Germination Days: <%= seed.germination_days%></li>
+      <li>Germination Days: <%= seed.germination_days%></li>
 
-  <li>Height When Mature: <%= seed.height_when_mature %></li>
+      <li>Height When Mature: <%= seed.height_when_mature %></li>
 
-  <li>Thin to Grow: <%= seed.thin_to_grow %></li>
+      <li>Thin to Grow: <%= seed.thin_to_grow %></li>
 
-  <li>Optimum Soil pH: <%= seed.optimum_soil_ph %></li>
+      <li>Optimum Soil pH: <%= seed.optimum_soil_ph %></li>
 
-  <li>Optimum Soil Temp: <%= seed.optimum_soil_temp %></li>
+      <li>Optimum Soil Temp: <%= seed.optimum_soil_temp %></li>
 
-  <li>Days to Harver: <%= seed.days_to_harvest %></li>
+      <li>Days to Harver: <%= seed.days_to_harvest %></li>
 
-  <li>Planting Info: <%= seed.planting_info %></li>
+      <li>Planting Info: <%= seed.planting_info %></li>
 
-  <li>BED: <%= seed.bed_id %></li>
-  ___________
-<p>
-<button><%= link_to "edit seed", edit_seed_path(seed) %></button>
-</p>
-<p>
-<button><%= form_for(seed, method: "delete") do |f| %>
-  <%= f.submit("Delete") %>
-<% end %>
-</button>
-</p>
-  ___________
+      <li>BED: <%= seed.bed_id %></li>
+    </ul>
+    ___________
   <p>
-
+  <button><%= link_to "edit seed", edit_seed_path(seed) %></button>
   </p>
-<% end %>
-</ul>
+  <p>
+    <%= form_for(seed, method: "delete") do |f| %>
+      <%= f.submit("Delete") %>
+    <% end %>
+  </p>
+    ___________
+    <p>
+
+    </p>
+  <% end %>
+  </ul>
+</div>

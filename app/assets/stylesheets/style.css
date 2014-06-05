@@ -1,0 +1,19 @@
+.form-container {
+  padding-left: 40px;
+}
+
+.body-container {
+  padding: 80px 0px 0px 120px;
+}
+
+#new_seed input {
+  width: 300px;
+}
+
+#new_seed input {
+  width: 300px;
+  height: 40px;
+  line-height: 2;
+  font-size: 17px;
+}
+
