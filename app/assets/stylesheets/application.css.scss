@@ -14,7 +14,8 @@
 
 
 body {
-  background-image: url('<%= asset_path("seedly-logo.png") %>');
+  background-image: asset-url("seedly-logo.png", image);
+  /*background-image: url('<%= asset_path("seedly-logo.png") %>');*/
   background-repeat: no-repeat;
   background-size: 50%;
   background-attachment: scroll, fixed;
