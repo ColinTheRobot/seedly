@@ -17,7 +17,11 @@
   font-size: 17px;
 }
 
-img {
-  height: 30em;
-  padding-left: 7em;
+body {
+  background-image: url('seedly-logo.png');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-attachment: scroll, fixed;
+  background-position: 35em 5em, right;
 }
+
