@@ -18,18 +18,18 @@
   width: 130px;
 }
 
-#seedly-logo!important {
-  height: 40em;
-  background-attachment: scroll, fixed;
-  position: relative;
-   top: -85px;
-   right: -580px;
+#seedly-logot {
+  height: 40em !important;
+  background-attachment: scroll, fixed !important;
+  position: relative !important;
+   top: -85px !important;
+   right: -580px !important;
 }
 
-img!important {
+/*img {
    height: 40em;
   background-attachment: scroll, fixed;
   position: relative;
    top: -85px;
    right: -580px;
-}
+}*/
