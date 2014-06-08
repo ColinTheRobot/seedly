@@ -26,7 +26,7 @@
    right: -580px;
 }
 
-img {
+img!important {
    height: 40em;
   background-attachment: scroll, fixed;
   position: relative;
