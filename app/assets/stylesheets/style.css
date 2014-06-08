@@ -19,11 +19,11 @@
 }
 
 #seedly-logo {
-  height: 40em;
-  width: 40em;
-  position: relative;
-   top: -85px;
-   right: -580px;
+  height: 640px !important;
+  width: 640px !important;
+  position: relative !important;
+   top: -85px !important;
+   right: -580px !important;
 }
 
 /*img {
