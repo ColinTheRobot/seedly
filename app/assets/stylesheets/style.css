@@ -18,13 +18,14 @@
   width: 130px;
 }
 
-img {
+/*img {
   height: 30em;
   position: relative;
    top: -85px;
    right: -580px;
-}
+}*/
 
+background: url("seedly-logo.png") no-repeat center;
 /*img {
    height: 40em;
   background-attachment: scroll, fixed;
