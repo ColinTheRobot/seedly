@@ -18,7 +18,7 @@
   width: 130px;
 }
 
-img, #seedly-logo {
+#seedly-logo {
   height: 40em;
   background-attachment: scroll, fixed;
   position: relative;
