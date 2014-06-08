@@ -19,11 +19,10 @@
 }
 
 img {
-  height: 640px !important;
-  width: 640px !important;
-  position: relative !important;
-   top: -85px !important;
-   right: -580px !important;
+  height: 30em;
+  position: relative;
+   top: -85px;
+   right: -580px;
 }
 
 /*img {
