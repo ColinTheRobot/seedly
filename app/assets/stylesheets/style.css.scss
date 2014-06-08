@@ -11,7 +11,7 @@
 #new_seed input {
   width: 300px;
   height: 40px;
-  line-height: 2;
+  line-height: 20px;
   font-size: 17px;
 }
 #new_seed.new_seed {
@@ -24,6 +24,33 @@ img {
    top: -85px;
    right: -580px;
 }
+
+.nav ul {
+    padding: 10px;
+    background: black;
+    text-align: right;
+    padding-right: 8em;
+    list-style-type: none;
+
+  }
+
+.other-nav a {
+    display: block;
+    width: 20em;
+    font-size: 22px;
+}
+
+.other-nav li {
+  list-style-type: none;
+  line-height: 45px;
+}
+
+.nav li {
+  color: white;
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+
 
 /*background: url("/assets/seedly-logo.png") no-repeat center;*/
 /*img {

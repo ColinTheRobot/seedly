@@ -2,14 +2,9 @@
 
   <p>
     <% if logged_in? %>
-    <ul>
-      <p>Welcome back <%= current_user.name %></p>
-      <li>
-        <%= link_to "logout", logout_path %>
-      </li>
+    <ul class="other-nav">
       <li>
         <%= link_to "Find Frost Dates by Locations", frost_date_searching_path %>
-
       </li>
       <li>
         <%= link_to "Add a Seed", new_seed_path %>
@@ -24,13 +19,7 @@
 
     </ul>
     <% elsif %>
-    <ul>
-      <li>
-        <%= link_to "Log In", session_new_path %>
-      </li>
-      <li>
-        <%= link_to "Sign Up",  new_user_path %> Sign up to calculate sow by dates based on your local frost date.
-      </li>
+    <ul class="body-links">
       <li>
         <%= link_to "Find frost dates for your location!", frost_date_searching_path %>
       </li>
