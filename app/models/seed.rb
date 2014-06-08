@@ -27,5 +27,6 @@ class Seed < ActiveRecord::Base
 
   validates :variety, {presence: true}
   validates :user_id, {presence: true}
+  validates :suggested_sowing_date, {presence: true}
 
 end
