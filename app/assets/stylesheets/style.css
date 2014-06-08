@@ -18,7 +18,7 @@
   width: 130px;
 }
 
-#seedly-logo {
+#seedly-logo!important {
   height: 40em;
   background-attachment: scroll, fixed;
   position: relative;
@@ -26,3 +26,10 @@
    right: -580px;
 }
 
+img {
+   height: 40em;
+  background-attachment: scroll, fixed;
+  position: relative;
+   top: -85px;
+   right: -580px;
+}
