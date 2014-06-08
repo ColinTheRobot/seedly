@@ -33,7 +33,12 @@ img {
    top: -85px;
    right: -580px;
 }*/
+
 body {
-  background-image: url('<%= asset_path("seedly-logo.png") %> ');
-  background-position: top right;
+  background: asset_url('seedly-logo.png');
+  background-repeat: no-repeat;
+background-size: 40em;
+background-position-x: 40em;
+background-position-y: 14em;
 }
+
