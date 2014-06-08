@@ -7,17 +7,9 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *= depend_on_asset "seedly-logo.png"
+ *
  *= require_self
  *= require_tree .
  */
 
 
-body {
-  background-image: asset-url("seedly-logo.png", image);
-  /*background-image: url('<%= asset_path("seedly-logo.png") %>');*/
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-attachment: scroll, fixed;
-  background-position: 35em 5em, right;
-}
