@@ -39,6 +39,7 @@ end
 
 # Uses geocoder to find lat long
 gem 'geocoder', '~> 1.1.9'
+gem 'farmsense_wrapper', '~> 1.0.0'
 
 gem 'rails_12factor'
 

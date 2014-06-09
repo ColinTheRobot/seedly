@@ -17,8 +17,7 @@ class FrostDate < ActiveRecord::Base
 # self.get_stations takes the lat/long and returns a multidimensional array of hashes of the closest weather stations to the user
 # it outputs the station_id of the closest station (always the first station returned).
   def self.get_station(latitude, longitude)
-    raw_response = HTTParty.get("http://farmsense-prod.apigee.net/v1/frostdates/stations/?lat=#{latitude}8&lon=#{longitude}")
-    response = JSON.parse(raw_response)
+    response = FarmSenseWrapper.stations(latitude, longitude)
     station_id = response[0]["id"]
   end
 
@@ -27,8 +26,7 @@ class FrostDate < ActiveRecord::Base
 # 16º, 20º, 24º, 28º, 32º and 36º. This method is only concerned with the temperature threshold 32º.
 # prob_ninety, prob_fifty, prob_ten are raw date outputs——four integer string "0820". "08" represents the month and "20" represents the day.
   def self.get_raw_probabilities(station_id)
-   dates_raw = HTTParty.get("http://farmsense-prod.apigee.net/v1/frostdates/probabilities/?station=#{station_id}&season=2")
-        dates_response = JSON.parse(dates_raw)
+        dates_response = FarmSenseWrapper.dates(station_id, 2)
         thirty_two = dates_response[1]
 
         prob_ninety = thirty_two.fetch("prob_90")
