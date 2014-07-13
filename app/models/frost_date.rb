@@ -18,7 +18,6 @@ class FrostDate < ActiveRecord::Base
 # it outputs the station_id of the closest station (always the first station returned).
   def self.get_station(latitude, longitude)
     response = FarmSenseWrapper.stations(latitude, longitude)
-    binding.pry
     station_id = response[0]["id"]
   end
 
@@ -29,7 +28,7 @@ class FrostDate < ActiveRecord::Base
   def self.get_raw_probabilities(station_id)
         dates_response = FarmSenseWrapper.dates(station_id, 2)
         thirty_two = dates_response[1]
-binding.pry
+
         prob_ninety = thirty_two.fetch("prob_90")
         prob_fifty = thirty_two.fetch("prob_50")
         prob_ten = thirty_two.fetch("prob_10")
